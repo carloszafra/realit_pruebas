@@ -1,0 +1,13 @@
+# Blender MTL File: 'bake.blend'
+# Material Count: 1
+
+newmtl diamante
+Ns 900.000000
+Ka 0.140264 0.140264 0.140264
+Kd 0.616813 0.800000 0.258928
+Ks 0.831818 0.831818 0.831818
+Ke 0.199851 0.199851 0.199851
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd diatexture.png
