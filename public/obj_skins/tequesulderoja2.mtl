@@ -1,0 +1,46 @@
+# Blender MTL File: 'tequesulderoja2.blend'
+# Material Count: 4
+
+newmtl Material
+Ns 0.000000
+Ka 0.263636 0.263636 0.263636
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd Pine-Knotty-Wooden-Texture-for-Logo-Design.jpg
+
+newmtl None
+Ns 0.000000
+Ka 0.286364 0.286364 0.286364
+Kd 0.800000 0.800000 0.800000
+Ks 0.354545 0.354545 0.354545
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd vaso_salsa_2.png
+
+newmtl None_porcelanablanca.png
+Ns 272.250012
+Ka 0.177273 0.177273 0.177273
+Kd 0.800000 0.800000 0.800000
+Ks 0.672727 0.672727 0.672727
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd porcelanablanca.png
+
+newmtl teque
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd tequeskin.png
