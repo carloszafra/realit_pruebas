@@ -8,9 +8,9 @@ Kd 0.169314 0.638290 0.800000
 Ks 0.245455 0.245455 0.245455
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 0.986364
+d 0.777273
 illum 6
-map_Kd glass2.png
+map_Kd imperfection_0001_1200.jpg
 
 newmtl Material.015
 Ns 225.000000
