@@ -10,6 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.450000
 illum 6
+map_Kd glass2.png
 
 newmtl Material.015
 Ns 225.000000
