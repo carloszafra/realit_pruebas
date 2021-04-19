@@ -171,6 +171,51 @@
             ]
         }
     ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 6,
+                        "path" : "translation"
+                    }
+                },
+                {
+                    "sampler" : 1,
+                    "target" : {
+                        "node" : 6,
+                        "path" : "rotation"
+                    }
+                },
+                {
+                    "sampler" : 2,
+                    "target" : {
+                        "node" : 6,
+                        "path" : "scale"
+                    }
+                }
+            ],
+            "name" : "CubeAction",
+            "samplers" : [
+                {
+                    "input" : 12,
+                    "interpolation" : "LINEAR",
+                    "output" : 13
+                },
+                {
+                    "input" : 12,
+                    "interpolation" : "LINEAR",
+                    "output" : 14
+                },
+                {
+                    "input" : 12,
+                    "interpolation" : "LINEAR",
+                    "output" : 15
+                }
+            ]
+        }
+    ],
     "materials" : [
         {
             "doubleSided" : true,
@@ -209,17 +254,13 @@
             "name" : "Material",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    1,
-                    1,
-                    1,
+                    0.08003319799900055,
+                    0.11818236857652664,
+                    0.8000000715255737,
                     0.8409091234207153
                 ],
-                "baseColorTexture" : {
-                    "index" : 1,
-                    "texCoord" : 0
-                },
-                "metallicFactor" : 0.09545454382896423,
-                "roughnessFactor" : 0.06363636255264282
+                "metallicFactor" : 0.22727274894714355,
+                "roughnessFactor" : 0.2772727310657501
             }
         }
     ],
@@ -239,11 +280,6 @@
             ]
         },
         {
-            "extras" : {
-                "targetNames" : [
-                    "Liquid Particle System"
-                ]
-            },
             "name" : "Cube",
             "primitives" : [
                 {
@@ -253,17 +289,8 @@
                         "TEXCOORD_0" : 6
                     },
                     "indices" : 7,
-                    "material" : 1,
-                    "targets" : [
-                        {
-                            "POSITION" : 8,
-                            "NORMAL" : 9
-                        }
-                    ]
+                    "material" : 1
                 }
-            ],
-            "weights" : [
-                0
             ]
         },
         {
@@ -271,11 +298,11 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 10,
-                        "NORMAL" : 11,
-                        "TEXCOORD_0" : 12
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
                     },
-                    "indices" : 13
+                    "indices" : 11
                 }
             ]
         }
@@ -284,10 +311,6 @@
         {
             "sampler" : 0,
             "source" : 0
-        },
-        {
-            "sampler" : 0,
-            "source" : 1
         }
     ],
     "images" : [
@@ -295,11 +318,6 @@
             "mimeType" : "image/jpeg",
             "name" : "imperfection_0001_1200",
             "uri" : "imperfection_0001_1200.jpg"
-        },
-        {
-            "mimeType" : "image/jpeg",
-            "name" : "wood grain",
-            "uri" : "wood%20grain.jpg"
         }
     ],
     "accessors" : [
@@ -374,28 +392,6 @@
         {
             "bufferView" : 8,
             "componentType" : 5126,
-            "count" : 14,
-            "max" : [
-                0,
-                0,
-                0
-            ],
-            "min" : [
-                0,
-                0,
-                0
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 9,
-            "componentType" : 5126,
-            "count" : 14,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 10,
-            "componentType" : 5126,
             "count" : 1984,
             "max" : [
                 1.000000238418579,
@@ -410,22 +406,52 @@
             "type" : "VEC3"
         },
         {
-            "bufferView" : 11,
+            "bufferView" : 9,
             "componentType" : 5126,
             "count" : 1984,
             "type" : "VEC3"
         },
         {
-            "bufferView" : 12,
+            "bufferView" : 10,
             "componentType" : 5126,
             "count" : 1984,
             "type" : "VEC2"
         },
         {
-            "bufferView" : 13,
+            "bufferView" : 11,
             "componentType" : 5123,
             "count" : 2880,
             "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 35,
+            "max" : [
+                1.4583333333333333
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 35,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5126,
+            "count" : 35,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 15,
+            "componentType" : 5126,
+            "count" : 35,
+            "type" : "VEC3"
         }
     ],
     "bufferViews" : [
@@ -471,33 +497,43 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 168,
+            "byteLength" : 23808,
             "byteOffset" : 35728
         },
         {
             "buffer" : 0,
-            "byteLength" : 168,
-            "byteOffset" : 35896
-        },
-        {
-            "buffer" : 0,
             "byteLength" : 23808,
-            "byteOffset" : 36064
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 23808,
-            "byteOffset" : 59872
+            "byteOffset" : 59536
         },
         {
             "buffer" : 0,
             "byteLength" : 15872,
-            "byteOffset" : 83680
+            "byteOffset" : 83344
         },
         {
             "buffer" : 0,
             "byteLength" : 5760,
-            "byteOffset" : 99552
+            "byteOffset" : 99216
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 140,
+            "byteOffset" : 104976
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 420,
+            "byteOffset" : 105116
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 560,
+            "byteOffset" : 105536
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 420,
+            "byteOffset" : 106096
         }
     ],
     "samplers" : [
@@ -508,7 +544,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 105312,
+            "byteLength" : 106516,
             "uri" : "cup2.bin"
         }
     ]
